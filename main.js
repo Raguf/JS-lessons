@@ -119,6 +119,7 @@ console.log(markHigherBMI);
 
 /* ---------- Strings and Template Literals ---------- */
 
+/*
 const firstName = "Ramey";
 const year = 2024;
 const birthYear = 1989;
@@ -142,3 +143,25 @@ const rameyNew = `I'm ${firstName}, a ${
 console.log(rameyNew);
 
 console.log(`String with \n\ multiple \n\ lines`); // If you need space
+*/
+
+/* ---------- if - else Statements ---------- */
+
+const age = 14;
+
+if (age >= 18) {
+  console.log("Ramey can drive a car 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Ramey is too young. Wait some ${yearsLeft} years 😒`);
+}
+
+const birthYear = 1989;
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
