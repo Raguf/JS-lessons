@@ -222,6 +222,7 @@ console.log("25" * "3");
 
 // 5 falsy values: 0, "", undefined, null, Not a Number (NaN).
 
+/*
 console.log(Boolean(0));
 console.log(Boolean(undefined));
 console.log(Boolean("Ramey"));
@@ -242,3 +243,28 @@ if (height) {
 } else {
   console.log("Height is undefined 😒");
 }
+*/
+
+/* ---------- Equality Operators == vs === ---------- */
+
+const age = 18;
+
+if (age === 18) console.log("You just became an adult 😊");
+
+if (age == 18) console.log("You just became an adult 😁");
+
+const favNumber = Number(prompt("What's your favourite number?"));
+
+console.log(`My favourite number is ${favNumber}`);
+
+if (favNumber == 7) {
+  console.log("Cool! 7️⃣ is an amazing number 😊");
+} else if (favNumber === 9) {
+  console.log("9️⃣ is a cool number");
+} else if (favNumber === 23) {
+  console.log("2️⃣3️⃣ is a love number");
+} else {
+  console.log("Number is not 7 or 9 or 23");
+}
+
+if (favNumber !== 23) console.log("Why not is 23?");
