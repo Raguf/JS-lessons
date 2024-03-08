@@ -1,4 +1,4 @@
-/* ---------- Values and variables ---------- */
+/* ---------- Values and Variables ---------- */
 
 /*let fullName = "Ramey";
 let age = 34;
@@ -103,7 +103,7 @@ Test data:
 Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 */
-
+/*
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -115,3 +115,30 @@ const markHigherBMI = BMIMark > BMIJohn;
 
 console.log(`Mark BMI's is ${BMIMark} & John BMI's is ${BMIJohn}.`);
 console.log(markHigherBMI);
+*/
+
+/* ---------- Strings and Template Literals ---------- */
+
+const firstName = "Ramey";
+const year = 2024;
+const birthYear = 1989;
+const job = "developer";
+
+const ramey =
+  "I'm " +
+  firstName +
+  " ,a " +
+  (year - birthYear) +
+  " years old " +
+  "and I'm a " +
+  job;
+
+console.log(ramey);
+
+const rameyNew = `I'm ${firstName}, a ${
+  year - birthYear
+} years old and I'm a ${job}`;
+
+console.log(rameyNew);
+
+console.log(`String with \n\ multiple \n\ lines`); // If you need space
