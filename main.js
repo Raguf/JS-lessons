@@ -199,6 +199,7 @@ if (BMIMark > BMIJohn) {
 
 /* ----- Type Conversion ----- */
 
+/*
 const inputYear = "1989";
 
 console.log(Number(inputYear), inputYear);
@@ -207,9 +208,37 @@ console.log(Number(inputYear) + 18);
 console.log(Number("Ramey")); // NaN - "not a number"
 
 console.log(String(23), 23);
+*/
 
 /* ----- Type Coercion ----- */
 
+/*
 console.log("I'm " + 23 + " years old");
 console.log("23" - "10" - 3);
 console.log("25" * "3");
+*/
+
+/* ---------- Truthy and Falsy Values ---------- */
+
+// 5 falsy values: 0, "", undefined, null, Not a Number (NaN).
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Ramey"));
+console.log(Boolean({}));
+
+const money = "100";
+
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get job!");
+}
+
+let height = 123;
+
+if (height) {
+  console.log("Wow! Height is defined!");
+} else {
+  console.log("Height is undefined 😒");
+}
