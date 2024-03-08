@@ -176,7 +176,7 @@ Your tasks:
 
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
 */
-
+/*
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -193,3 +193,23 @@ if (BMIMark > BMIJohn) {
     `John's BMI (${BMIJohn}  is higher than Mark's BMI (${BMIMark}))`
   );
 }
+*/
+
+/* ---------- Type Conversion and Coercion ---------- */
+
+/* ----- Type Conversion ----- */
+
+const inputYear = "1989";
+
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Ramey")); // NaN - "not a number"
+
+console.log(String(23), 23);
+
+/* ----- Type Coercion ----- */
+
+console.log("I'm " + 23 + " years old");
+console.log("23" - "10" - 3);
+console.log("25" * "3");
