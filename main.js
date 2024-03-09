@@ -358,6 +358,7 @@ if (dolphScore > koalaScore && dolphScore >= 100) {
 
 /* ---------- The switch Statement ---------- */
 
+/*
 const day = "monday";
 
 switch (day) {
@@ -400,3 +401,28 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day");
 }
+*/
+
+/* ---------- The Conditional (Ternary) Operator ---------- */
+
+const age = 2;
+
+// age >= 18
+//   ? console.log("I like to drink 🍷")
+//   : console.log("I can drink only water 💦");
+
+// const drink = age >= 18 ? "wine 🍷" : "water 💦";
+
+// console.log(drink);
+
+let drink2;
+
+if (age >= 18) {
+  drink2 = "wine 🍷";
+} else {
+  drink2 = "water 💦";
+}
+
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 💦"}`);
