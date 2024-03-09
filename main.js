@@ -445,9 +445,39 @@ Hints:To calculate 20% of a value, simply multiply it by 20/100 = 0.2
 Value X is between 50 and 300,  if it's ▶= 50 && ◀= 300 😉
 */
 
+/*
 const bill = 275;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 
 console.log(
   `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
 );
+*/
+
+/* ---------- Functions ---------- */
+
+function logger() {
+  console.log("My name is Ramey");
+}
+
+logger(); // calling / running / invoking function
+
+function fruitProcessor(apples, oranges) {
+  console.log(apples, oranges);
+  const juice = `🧃 consist of ${apples} 🍎 & ${oranges} 🍊.`;
+  return juice;
+}
+
+const fresh = fruitProcessor(2, 4);
+
+console.log(fresh);
+
+function transsportCount(moto, car, train, aircraft, ship) {
+  console.log(moto, car, train, aircraft, ship);
+  const factory = `This year it was released: 🏍️(${moto}), 🚗(${car}), 🚄(${train}), ✈️(${aircraft}) & 🛳️(${ship}).`;
+  return factory;
+}
+
+const transsport = transsportCount(10, 20, 5, 4, 2);
+
+console.log(transsport);
