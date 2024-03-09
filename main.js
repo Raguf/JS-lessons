@@ -327,7 +327,7 @@ console.log(dolphScore, koalaScore);
 
 
 if (dolphScore > koalaScore) {
-  console.log(" Dolphins win 💪");
+  console.log("Dolphins win 💪");
 } else if (koalaScore > dolphScore) {
   console.log("Koalas win 😁");
 } else if (dolphScore === koalaScore) {
@@ -335,13 +335,14 @@ if (dolphScore > koalaScore) {
 }
 */
 
+/*
 const dolphScore = (96 + 108 + 89) / 3;
 const koalaScore = (88 + 91 + 110) / 3;
 
 console.log(dolphScore, koalaScore);
 
 if (dolphScore > koalaScore && dolphScore >= 100) {
-  console.log(" Dolphins win 💪");
+  console.log("Dolphins win 💪");
 } else if (koalaScore > dolphScore && koalaScore >= 100) {
   console.log("Koalas win 😁");
 } else if (
@@ -352,4 +353,50 @@ if (dolphScore > koalaScore && dolphScore >= 100) {
   console.log("Both team wins 🧑🏻‍🤝‍🧑🏻");
 } else {
   console.log("No one wins 😒");
+}
+*/
+
+/* ---------- The switch Statement ---------- */
+
+const day = "monday";
+
+switch (day) {
+  case "monday":
+    console.log("Training plan 🏋️‍♂️");
+    console.log("Go to");
+    break;
+  case "tuesday":
+    console.log("Learning web development 👨‍💻");
+    break;
+  case "wednesday":
+    console.log("Reading book 📙");
+    break;
+  case "thursday":
+    console.log("Walking in the park 🚶‍♂️");
+    break;
+  case "friday":
+    console.log("Meditation 🧘‍♂️");
+    break;
+  case "saturday":
+    console.log("Swimmig 🏊‍♂️");
+    break;
+  case "sunday":
+    console.log("Relaxing 😮‍💨");
+    break;
+  default:
+    console.log("Not a valid day");
+}
+
+if (day === "monday") {
+  console.log("Training plan 🏋️‍♂️");
+} else if (day === "tuesday") {
+  console.log("Learning web development 👨‍💻");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Reading book 📙");
+} else if (day === "friday") {
+  console.log("Meditation 🧘‍♂️");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Relaxing 😮‍💨");
+} else {
+  console.log("Not a valid day");
 }
