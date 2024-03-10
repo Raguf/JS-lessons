@@ -586,6 +586,7 @@ Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 */
 
+/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 console.log(calcAverage(3, 4, 5));
@@ -606,3 +607,42 @@ const checkWinner = function (avgDolph, avgKoala) {
 };
 
 console.log(checkWinner(dolphScore, koalaScore));
+*/
+
+/* ---------- Arrays ---------- */
+
+const friends = ["Ali", "Islam", "Nihat"];
+
+console.log(friends);
+
+// const years = new Array(1989, 1990, 1991);
+
+console.log(friends[0]);
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+console.log(friends);
+
+friends[1] = "Razim";
+console.log(friends);
+
+const ramey = ["Raguf", "Mehdiyev", 2024 - 1989, "developer", friends];
+console.log(ramey);
+
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const years = [1989, 1999, 2009, 2019];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
