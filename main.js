@@ -456,6 +456,7 @@ console.log(
 
 /* ---------- Functions ---------- */
 
+/*
 function logger() {
   console.log("My name is Ramey");
 }
@@ -481,3 +482,22 @@ function transsportCount(moto, car, train, aircraft, ship) {
 const transsport = transsportCount(10, 20, 5, 4, 2);
 
 console.log(transsport);
+*/
+
+/* ---------- Function Declarations vs Expressions ---------- */
+
+/*
+// Function Declarations
+function calcAge1(birthYear) {
+  return 2024 - birthYear;
+}
+const age1 = calcAge1(1989);
+
+// Function Expressions
+const calcAge2 = function (birthYear) {
+  return 2024 - birthYear;
+};
+const age2 = calcAge2(1989);
+
+console.log(age1, age2);
+*/
