@@ -611,6 +611,7 @@ console.log(checkWinner(dolphScore, koalaScore));
 
 /* ---------- Arrays ---------- */
 
+/*
 const friends = ["Ali", "Islam", "Nihat"];
 
 console.log(friends);
@@ -646,3 +647,32 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+*/
+
+/* ---------- Basic Array Operations (Methods) ---------- */
+
+const friends = ["Ali", "Islam", "Nihat"];
+
+//Add elements
+const newLength = friends.push("Abdulla"); // push method - add new last element
+console.log(newLength);
+
+friends.unshift("Razim"); // // unshift method - add new first element
+console.log(friends);
+
+//Remove elements
+friends.pop(); // pop method - remove last element
+console.log(friends);
+
+friends.shift(); // shift method - remove first element
+console.log(friends);
+
+console.log(friends.indexOf("Islam")); // indexof method - show  current index element
+
+console.log(friends.includes("Islam")); // includes method - show true or false element
+
+if (friends.includes("Peter")) {
+  console.log("Peter is my friend");
+} else {
+  console.log("Who are Peter? I don't know");
+}
