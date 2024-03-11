@@ -709,6 +709,7 @@ console.log(bills, tips, total);
 
 /* ---------- Objects ---------- */
 
+/*
 const rameyArray = [
   "Raquf",
   "Mehdiyev",
@@ -724,3 +725,35 @@ const ramey = {
   job: "developer",
   friends: ["Ali", "Kamal", "Elnur"],
 };
+*/
+
+/* ---------- Dot vs Bracket Notation ---------- */
+
+const ramey = {
+  firstName: "Raquf",
+  lastName: "Mehdiyev",
+  age: 2024 - 1989,
+  job: "developer",
+  friends: ["Ali", "Kamal", "Elnur"],
+};
+console.log(ramey);
+console.log(ramey.lastName);
+console.log(ramey["age"]);
+
+const interestedIn = prompt(
+  "What do you want to know about Ramey? Choose between fisrtName, lastName, age, job, friends."
+);
+
+if (ramey[interestedIn]) {
+  console.log(ramey[interestedIn]);
+} else {
+  console.log("Choose between fisrtName, lastName, age, job, friends.");
+}
+
+ramey.location = "Baku";
+
+// Chalange
+// "Ramey has 3 friends, and his best friend is called Kamal"
+console.log(
+  `${ramey.firstName} has ${ramey.friends.length} friends, and his best friend is called ${ramey.friends[1]}`
+);
