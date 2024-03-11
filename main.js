@@ -693,6 +693,7 @@ Your tasks:
 Test data: 125, 555 and 44
 */
 
+/*
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -704,3 +705,22 @@ const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, total);
+*/
+
+/* ---------- Objects ---------- */
+
+const rameyArray = [
+  "Raquf",
+  "Mehdiyev",
+  2024 - 1989,
+  "developer",
+  ["Ali", "Kamal", "Elnur"],
+];
+
+const ramey = {
+  firstName: "Raquf",
+  lastName: "Mehdiyev",
+  age: 2024 - 1989,
+  job: "developer",
+  friends: ["Ali", "Kamal", "Elnur"],
+};
