@@ -729,6 +729,7 @@ const ramey = {
 
 /* ---------- Dot vs Bracket Notation ---------- */
 
+/*
 const ramey = {
   firstName: "Raquf",
   lastName: "Mehdiyev",
@@ -757,3 +758,41 @@ ramey.location = "Baku";
 console.log(
   `${ramey.firstName} has ${ramey.friends.length} friends, and his best friend is called ${ramey.friends[1]}`
 );
+*/
+
+/* ---------- Object Methods ---------- */
+
+const ramey = {
+  firstName: "Raquf",
+  lastName: "Mehdiyev",
+  birthYear: 1989,
+  job: "developer",
+  friends: ["Ali", "Kamal", "Elnur"],
+  hasDriverLicense: true,
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   return 2024 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummery: function () {
+    return `${this.firstName} is a ${this.age}-year old ${this.job}, and he ${
+      this.hasDriverLicense ? "has" : "has not"
+    } a driver's license.`;
+  },
+};
+console.log(ramey.calcAge());
+console.log(ramey.age);
+console.log(ramey.age);
+console.log(ramey.getSummery());
+//console.log(ramey["calcAge"](1989));
+
+// Challenge
+// "Ramey is a 46-year old teacher, and he has a driver's license"
