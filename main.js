@@ -866,6 +866,7 @@ for (let rep = 1; rep <= 10; rep++) {
 
 /* ---------- Looping Arrays, Breaking and Continuing ---------- */
 
+/*
 const ramey = [
   "Raquf",
   "Mehdiyev",
@@ -906,4 +907,27 @@ console.log("---------- Break with Number ----------");
 for (let i = 0; i < ramey.length; i++) {
   if (typeof ramey[i] === "number") break;
   console.log(ramey[i], typeof ramey[i]);
+}
+*/
+
+/* ---------- Looping Backwards and Loops in Loops ---------- */
+
+const ramey = [
+  "Raquf",
+  "Mehdiyev",
+  2024 - 1989,
+  "developer",
+  ["Ali", "Kamal", "Elnur"],
+];
+
+for (let i = ramey.length - 1; i >= 0; i--) {
+  console.log(i, ramey[i]);
+}
+
+for (let exs = 1; exs <= 3; exs++) {
+  console.log(`***** Starting exercise № ${exs} *****`);
+
+  for (let rep = 1; rep <= 5; rep++) {
+    console.log(`-----Exersice ${exs}: Repetition № ${rep}`);
+  }
 }
