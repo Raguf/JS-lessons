@@ -857,7 +857,53 @@ if (mark.bmi > john.bmi) {
 
 /* ---------- Iteration The for Loop ---------- */
 
+/*
 //for loop keeps runnig while condition is true
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
+}
+*/
+
+/* ---------- Looping Arrays, Breaking and Continuing ---------- */
+
+const ramey = [
+  "Raquf",
+  "Mehdiyev",
+  2024 - 1989,
+  "developer",
+  ["Ali", "Kamal", "Elnur"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < ramey.length; i++) {
+  console.log(ramey[i], typeof ramey[i]);
+
+  //types[i] = typeof ramey[i];
+  types.push(typeof ramey[i]);
+}
+
+console.log(types);
+
+const years = [1989, 2009, 2019, 2029];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2039 - years[i]);
+}
+console.log(ages);
+
+// Continue
+console.log("---------- Continue only Strings ----------");
+for (let i = 0; i < ramey.length; i++) {
+  if (typeof ramey[i] !== "string") continue;
+  console.log(ramey[i], typeof ramey[i]);
+}
+
+// Break
+console.log("---------- Break with Number ----------");
+for (let i = 0; i < ramey.length; i++) {
+  if (typeof ramey[i] === "number") break;
+  console.log(ramey[i], typeof ramey[i]);
 }
