@@ -912,6 +912,7 @@ for (let i = 0; i < ramey.length; i++) {
 
 /* ---------- Looping Backwards and Loops in Loops ---------- */
 
+/*
 const ramey = [
   "Raquf",
   "Mehdiyev",
@@ -928,6 +929,31 @@ for (let exs = 1; exs <= 3; exs++) {
   console.log(`***** Starting exercise № ${exs} *****`);
 
   for (let rep = 1; rep <= 5; rep++) {
-    console.log(`-----Exersice ${exs}: Repetition № ${rep}`);
+    console.log(`----- Exersice ${exs}: Repetition № ${rep} -----`);
+  }
+}
+*/
+
+/* ---------- The while Loop ---------- */
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`----- Repetition № ${rep} -----`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`While ----- Repetition № ${rep} -----`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+
+  if (dice === 6) {
+    console.log("Loop is about to end......");
   }
 }
