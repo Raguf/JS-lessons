@@ -977,7 +977,7 @@ Bonus:
 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
 4.3. Call the function with the 'totals' array.
 */
-
+/*
 const calcTip = function (bills) {
   return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
 };
@@ -1010,3 +1010,11 @@ const calcAverage = function (arr) {
 };
 console.log(calcAverage([2, 3, 4]));
 console.log(calcAverage(totals));
+*/
+
+/* ---------- Installing Node.js and Setting Up a Dev Environment ---------- */
+console.log('Hello world');
+console.log('live server is loaded');
+console.log('Shukur Allaha');
+console.log(23);
+console.log(34);
