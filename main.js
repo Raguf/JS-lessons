@@ -1013,7 +1013,7 @@ console.log(calcAverage(totals));
 */
 
 /* ---------- Solving some tasks ---------- */
-
+/*
 // Problem №1:
 //We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error".
 
@@ -1078,3 +1078,48 @@ const calcTempAmplNew = function (t1, t2) {
 // calcTempAmpl([4, 3, 5, 23]);
 const amplituteNew = calcTempAmplNew([3, 5, 1], [9, 0, 5]);
 console.log(amplituteNew);
+*/
+
+/* ---------- Debugging with the Console and Breakpoints ---------- */
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    // c) Fix error
+    // value: Number(prompt('Degrees celsius:')),
+    value: 10,
+  };
+  // b) Find error
+  //console.log(measurement);
+  console.table(measurement);
+  //console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// a) Identify error
+console.log(measureKelvin());
+//Using a debbuger
+const calcTempAmplBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = 0;
+  let min = 0;
+  let subtract = max - min;
+  for (let i = 0; i < temps.length; i++) {
+    const currTemp = temps[i];
+    if (typeof currTemp !== 'number') continue;
+    if (currTemp > max) max = currTemp;
+    if (currTemp < min) min = currTemp;
+  }
+  console.log(min, max);
+  return max - min;
+};
+// calcTempAmpl([4, 3, 5, 23]);
+const amplituteBug = calcTempAmplBug([3, 5, 1], [9, 4, 5]);
+// a) Identify
+console.log(amplituteBug);
