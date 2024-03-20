@@ -1150,7 +1150,7 @@ Data 2: [12, 5, -5, 0, 4]
 // - Strings needs to contain day (index + 1).
 // - Add ... between elements and start and end of string.
 // - Log  a string to console.
-
+/*
 const temp = [17, 21, 23];
 const tempNew = [12, 5, -5, 0, 4];
 
@@ -1163,3 +1163,4 @@ const printForecast = function (arr) {
 };
 printForecast(temp);
 printForecast(tempNew);
+*/
