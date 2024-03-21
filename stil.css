@@ -1,0 +1,15 @@
+body {
+  background-color: yellow;
+  font-family: Arial;
+}
+h1 {
+  font-size: 40px;
+}
+.first {
+  color: red;
+}
+#your-name {
+  background-color: green;
+  border: 3px solid blue;
+  border-radius: 4px;
+}
