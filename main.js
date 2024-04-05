@@ -1164,3 +1164,40 @@ const printForecast = function (arr) {
 printForecast(temp);
 printForecast(tempNew);
 */
+
+/* ---------- Scoping in Practice ---------- */
+
+'use strict';
+
+function calcAge(birthYear) {
+  const age = 2024 - birthYear;
+
+  const printAge = function () {
+    const output = `${firstName} is ${age} old years, and he born in ${birthYear}.`;
+    console.log(output);
+
+    if (birthYear >= 1981 && birthYear <= 1996) {
+      // Creating new  variable with same name as outer scope's variable
+      const firstName = 'Yusif';
+
+      // Reassigning 'Output' scope's varible
+      const output = 'New Output';
+
+      const str = `Wow ${firstName}, yor're millenial!!!`;
+      console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
+
+      console.log(add(5, 6));
+    }
+    console.log(output);
+  };
+  printAge();
+
+  return age;
+}
+
+const firstName = 'Ramey';
+calcAge(1989);
