@@ -1204,7 +1204,7 @@ calcAge(1989);
 */
 
 /* ---------- Hoisting and TDZ ---------- */
-
+/*
 // console.log(me); // undefined
 // console.log(job); // Uncaught ReferenceError: Cannot access 'job' before initialization
 // console.log(year); // Uncaught ReferenceError: Cannot access 'year' before initialization
@@ -1247,3 +1247,41 @@ const z = 3;
 console.log(x === window.x); // true
 console.log(y === window.y); // false
 console.log(z === window.z); // false
+*/
+
+/* ---------- The this Keyword ---------- */
+'use strict';
+// Use this keyword in function
+const calcAge = function (birthYear) {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+calcAge(1989);
+
+// Use this keyword in arrow function
+const caclAgeArrow = (birthYear) => {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+caclAgeArrow(1980);
+
+// Use this keyword in object(with help method)
+const ramey = {
+  year: 1989,
+  calcAge: function (birthYear) {
+    console.log(this);
+    console.log(2024 - this.year);
+  },
+};
+ramey.calcAge();
+
+const yumey = {
+  year: 2001,
+};
+
+yumey.calcAge = ramey.calcAge;
+yumey.calcAge();
+
+const f = ramey.calcAge;
+
+f();
