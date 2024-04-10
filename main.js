@@ -1289,7 +1289,7 @@ f();
 */
 
 /* ---------- Regular Functions vs Arrow Functions ---------- */
-
+/*
 // var firstName = 'Yumey';
 
 // const ramey = {
@@ -1352,3 +1352,55 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5);
+*/
+
+/* ---------- Primitives vs Objects (Primitive vs Reference Types) ---------- */
+/*
+let age = 35;
+let oldAge = age;
+age = 36;
+
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Ramey',
+  age: 37,
+};
+
+const friend = me;
+friend.age = 38;
+
+console.log(me.age);
+console.log(friend.age);
+*/
+// Primitive types
+let lastName = 'Mehdiyev';
+let oldLastName = lastName;
+lastName = 'Aliyev';
+console.log(lastName, oldLastName);
+
+// Reference types
+const natali = {
+  firstName: 'Natali',
+  lastName: 'Jonson',
+  age: 30,
+};
+
+const nataliMarried = natali;
+nataliMarried.lastName = 'Simpson';
+console.log(natali.lastName, nataliMarried.lastName);
+
+// Copying objects
+const natali2 = {
+  firstName: 'Natali',
+  lastName: 'Jonson',
+  age: 30,
+  family: ['Father', 'Mother', 'Brother', 'Sister'],
+};
+
+const nataliCopy = Object.assign({}, natali2);
+nataliCopy.lastName = 'Davis';
+
+nataliCopy.family.push('Uncle', 'Aunt');
+console.log(natali2, nataliCopy);
