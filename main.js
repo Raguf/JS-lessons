@@ -1374,6 +1374,7 @@ friend.age = 38;
 console.log(me.age);
 console.log(friend.age);
 */
+/*
 // Primitive types
 let lastName = 'Mehdiyev';
 let oldLastName = lastName;
@@ -1404,3 +1405,32 @@ nataliCopy.lastName = 'Davis';
 
 nataliCopy.family.push('Uncle', 'Aunt');
 console.log(natali2, nataliCopy);
+*/
+
+/* ---------- Destructuring Arrays ---------- */
+
+const restaurant = {
+  name: 'Gavali',
+  location: 'Asif Meherremov 23, Baku, Azerbaijan',
+  categories: ['National', 'Vegetarian', 'Organic'],
+  startMenu: ['Kete', 'Dovqa', 'Coban salati'],
+  mainMenu: ['Dolma', 'Ash', 'Kebab'],
+};
+
+const arr = [2, 3, 4];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+const [x, y, z] = arr;
+console.log(x, y, z);
+
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
+
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
+
+[main, secondary] = [secondary, main];
