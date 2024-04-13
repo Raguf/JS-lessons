@@ -1415,6 +1415,10 @@ const restaurant = {
   categories: ['National', 'Vegetarian', 'Organic'],
   startMenu: ['Kete', 'Dovqa', 'Coban salati'],
   mainMenu: ['Dolma', 'Ash', 'Kebab'],
+
+  order: function (startetIndex, mainIndex) {
+    return [this.startMenu[startetIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 const arr = [2, 3, 4];
@@ -1428,9 +1432,26 @@ console.log(x, y, z);
 let [main, , secondary] = restaurant.categories;
 console.log(main, secondary);
 
+// Switching variables
 // const temp = main;
 // main = secondary;
 // secondary = temp;
 // console.log(main, secondary);
 
 [main, secondary] = [secondary, main];
+console.log(main, secondary);
+
+// Receive 2 return values from a fucntion
+const [starter, final] = restaurant.order(2, 0);
+console.log(starter, final);
+
+// nEsted destructing
+const nested = [1, 2, [3, 4]];
+// const [i, , j] = nested;
+// console.log(i, j);
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+// Default values
+const [p, q, r] = [8, 9];
+console.log(p, q, r);
