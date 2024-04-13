@@ -1408,7 +1408,7 @@ console.log(natali2, nataliCopy);
 */
 
 /* ---------- Destructuring Arrays ---------- */
-
+/*
 const restaurant = {
   name: 'Gavali',
   location: 'Asif Meherremov 23, Baku, Azerbaijan',
@@ -1445,7 +1445,7 @@ console.log(main, secondary);
 const [starter, final] = restaurant.order(2, 0);
 console.log(starter, final);
 
-// nEsted destructing
+// Nested destructing
 const nested = [1, 2, [3, 4]];
 // const [i, , j] = nested;
 // console.log(i, j);
@@ -1455,3 +1455,88 @@ console.log(i, j, k);
 // Default values
 const [p, q, r] = [8, 9];
 console.log(p, q, r);
+*/
+
+/* ---------- Destructuring Objects ---------- */
+'use strict';
+
+const restaurant = {
+  name: 'Gavali',
+  location: 'Asif Meherremov 23, Baku, Azerbaijan',
+  categories: ['National', 'Vegetarian', 'Organic'],
+  startMenu: ['Kete', 'Dovqa', 'Coban salati'],
+  mainMenu: ['Dolma', 'Ash', 'Kebab'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    adrress,
+  }) {
+    console.log(
+      `Order received! ${this.startMenu[starterIndex]} & ${this.mainMenu[mainIndex]} we will delevery to ${adrress} at ${time}`
+    );
+  },
+};
+
+restaurant.orderDelivery({
+  time: '22:30',
+  adrress: 'Qara Qarayev 35',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  adrress: 'Qara Qarayev 35',
+  starterIndex: 1,
+});
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+// Rename some elelment of a object
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+// Default values of a object
+const { menu = [], startMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 777;
+
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj);
+console.log(a, b);
+
+// Nested objects
+
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c);
