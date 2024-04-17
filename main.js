@@ -1458,6 +1458,7 @@ console.log(p, q, r);
 */
 
 /* ---------- Destructuring Objects ---------- */
+/*
 'use strict';
 
 const restaurant = {
@@ -1540,3 +1541,92 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+*/
+
+/* ---------- The Spread Operator (...) ---------- */
+
+'use strict';
+
+const restaurant = {
+  name: 'Gavali',
+  location: 'Asif Meherremov 23, Baku, Azerbaijan',
+  categories: ['National', 'Vegetarian', 'Organic'],
+  startMenu: ['Kete', 'Dovqa', 'Coban salati'],
+  mainMenu: ['Dolma', 'Ash', 'Kebab'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    adrress,
+  }) {
+    console.log(
+      `Order received! ${this.startMenu[starterIndex]} & ${this.mainMenu[mainIndex]} we will delevery to ${adrress} at ${time}`
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your pasta with ${ing1},${ing2},${ing3}`);
+  },
+};
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Bozartma'];
+console.log(newMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.startMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. But not OBJECTS
+const str = 'Ramey';
+const letters = [...str, ' ', 'R.'];
+console.log(letters);
+console.log(...str);
+
+// Real example
+// const ingredients = [
+//   prompt("Let' s make pasta! Ingredient 1?"),
+//   prompt('Ingredient 2?'),
+//   prompt('Ingredient 3?'),
+// ];
+
+// console.log(ingredients);
+// restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = {
+  foundedIn: 1989,
+  ...restaurant,
+  founder: 'Asif Meherremov',
+};
+console.log(newRestaurant);
