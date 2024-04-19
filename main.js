@@ -1633,7 +1633,7 @@ console.log(newRestaurant);
 */
 
 /* ---------- Rest Pattern and Parameters ---------- */
-
+/*
 'use strict';
 
 const restaurant = {
@@ -1718,3 +1718,80 @@ add(...x);
 
 // Real example
 restaurant.orderPizza('Gobelek', 'Pomidor', 'Pendir', 'File');
+*/
+
+/* ---------- Short Circuiting (&& and ||)  ---------- */
+
+'use strict';
+
+const restaurant = {
+  name: 'Gavali',
+  location: 'Asif Meherremov 23, Baku, Azerbaijan',
+  categories: ['National', 'Vegetarian', 'Organic'],
+  startMenu: ['Kete', 'Dovqa', 'Coban salati'],
+  mainMenu: ['Dolma', 'Ash', 'Kebab'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    adrress,
+  }) {
+    console.log(
+      `Order received! ${this.startMenu[starterIndex]} & ${this.mainMenu[mainIndex]} we will delevery to ${adrress} at ${time}`
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your pasta with ${ing1},${ing2},${ing3}`);
+  },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+};
+
+/* ---------- OR operator  ---------- */
+
+// Use ANY data type,return ANY data type, short-circuiting
+console.log(3 || 'Ramey');
+console.log('' || 'Ramey');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || '' || 'Ramey' || 23 || null);
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+/* ---------- AND operator  ---------- */
+console.log(0 && 'Ramey');
+console.log(3 && 'Ramey');
+console.log('' && 'Ramey');
+console.log(true && 0);
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('Pendir', 'Un');
+}
