@@ -1801,7 +1801,7 @@ restaurant.orderPizza && restaurant.orderPizza('Pendir', 'Un');
 */
 
 /* ---------- The Nullish Coalescing Operator (??)   ---------- */
-
+/*
 'use strict';
 
 const restaurant = {
@@ -1858,3 +1858,85 @@ console.log(guests);
 // Nullish: null and undefined (NOT or '')
 const guestsCorrect = restaurant.numGuests ?? 10;
 console.log(guestsCorrect);
+*/
+
+/* ---------- Logical Assignment Operators ---------- */
+
+'use strict';
+
+const restaurant = {
+  name: 'Gavali',
+  location: 'Asif Meherremov 23, Baku, Azerbaijan',
+  categories: ['National', 'Vegetarian', 'Organic'],
+  startMenu: ['Kete', 'Dovqa', 'Coban salati'],
+  mainMenu: ['Dolma', 'Ash', 'Kebab'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    adrress,
+  }) {
+    console.log(
+      `Order received! ${this.startMenu[starterIndex]} & ${this.mainMenu[mainIndex]} we will delevery to ${adrress} at ${time}`
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your pasta with ${ing1},${ing2},${ing3}`);
+  },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+};
+
+const rest1 = {
+  name: 'Xezer',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'Golgol',
+  owner: 'Abdulla Javadov',
+};
+
+// OR assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// Short version
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// Nullish assignment operator (null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// AND assignment operator
+// rest2.owner = rest2.owner && '<Anonymous>';
+rest2.owner &&= '<Anonymous>';
+
+console.log(rest1);
+console.log(rest2);
